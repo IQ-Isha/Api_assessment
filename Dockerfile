@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 
 # Copy the contents of the /workspace/publish directory to the /app directory in the container
-COPY /workspace/publish/ .
+COPY /workspace/publish-myapp/ .
 
 # Expose the port that your application will run on (adjust as needed)
 EXPOSE 80
