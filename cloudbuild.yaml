@@ -1,0 +1,11 @@
+steps:
+  # Run tests (if applicable)
+  # Add test execution steps here if you have tests to run
+
+  # Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/practice-project-416810/demo/sarvjeet-docker', '.']
+
+  # Push Docker image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/practice-project-416810/demo/sarvjeet-docker']
