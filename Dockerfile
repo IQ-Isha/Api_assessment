@@ -10,6 +10,6 @@ RUN dotnet publish -c Release -o build --no-restore
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build ./build .
-ENV ASPNETCORE_URLS=http://*:8080
-EXPOSE 8080
+ENV ASPNETCORE_URLS=http://*:8081
+EXPOSE 8081
 ENTRYPOINT [ "dotnet", "WebApplication1.dll" ]
